@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Video Uploader 927</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #111;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+        }
+
+        .upload {
+            margin-top: 25px;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Ahmed Video Uploader 927</h1>
+
+    <p>
+        Upload and manage video content to TikTok through a simple automation tool.
+    </p>
+
+    <a
+        class="button"
+        href="#"
+        onclick="loginTikTok()">
+        Continue with TikTok
+    </a>
+
+    <div class="upload">
+
+        <h2>Upload Video</h2>
+
+        <p>
+            Select a video to upload to your authorized TikTok account as a draft.
+        </p>
+
+        <input
+            type="file"
+            id="videoFile"
+            accept="video/mp4,video/quicktime">
+
+        <button
+            class="button"
+            onclick="uploadVideo()">
+            Upload to TikTok Draft
+        </button>
+
+    </div>
+
+    <div
+        id="status"
+        class="status">
+    </div>
+
+    <footer>
+        By using this service, you agree to our
+        <a href="terms.html">Terms of Service</a>
+        and
+        <a href="privacy.html">Privacy Policy</a>.
+    </footer>
+
+</div>
+
+<script>
+
+function loginTikTok() {
+
+    document.getElementById("status").innerText =
+        "TikTok Login integration will be connected here.";
+
+}
+
+function uploadVideo() {
+
+    const file =
+        document.getElementById("videoFile").files[0];
+
+    if (!file) {
+
+        document.getElementById("status").innerText =
+            "Please select a video first.";
+
+        return;
+    }
+
+    document.getElementById("status").innerText =
+        "TikTok upload integration will be connected here.";
+
+}
+
+</script>
+
+</body>
+</html>
